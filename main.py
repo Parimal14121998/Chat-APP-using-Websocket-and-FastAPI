@@ -45,7 +45,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id:int):
 '''
 
 @app.websocket("/ws/{client_id}")
-async def websocket_endpoint(websocket: WebSocket, client_id:int):
+async def websocket_endpoint(websocket: WebSocket, client_id:str):
     await manager.check_connection(websocket)
     try:
         while True:
